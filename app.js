@@ -2,10 +2,11 @@
 var topic = [
     "Game of Thrones",
     "Agents of SHIELD",
-    "Handmaiden's Tale",
+    "Handmaid's Tale",
     "The Walking Dead",
     "The Simpsons",
-    "Stranger Things"
+    "Stranger Things",
+    "The Haunting of Hill House"
 ];
 
 displayButtons();
@@ -40,37 +41,40 @@ function displayTVshowInfo() {
         for (var i = 0; i < results.length; i++) {
             var rating = results[i].rating;
             var p = $("<p>").text("Rating: " + rating);
+            // var container = $("<div class='gif-image'>");
             var tvshowImage = $("<img>").attr({
                 "src": results[i].images.fixed_height_still.url,
                 "data-still": results[i].images.fixed_height_still.url,
                 "data-animate": results[i].images.fixed_height.url,
                 "data-state": "still"
             }).addClass("gif");
-            $("#tvshow-display").append(p, tvshowImage);
+            // container.append(p, tvshowImage);
+            $("#tvshow-display").prepend(p, tvshowImage);
         }
     })
 }
 
-$(".gif").on("click", function () {
-    // $(".gif").click(function () {
-    // var state = $(this).attr("data-state");
-    // var stillURL = $(this).attr("data-still");
-    // var animateURL = $(this).attr("data-animate");
+$(document).on("click", ".gif", function (event) {
+    event.preventDefault();
+    var state = $(this).attr("data-state");
+    var stillURL = $(this).attr("data-still");
+    var animateURL = $(this).attr("data-animate");
     // console.log(state);
     // console.log(stillURL);
     // console.log(animateURL);
-    alert("Clicked");
+    // alert("Clicked");
+    // console.log(event);
 
-    // if (state == "still") {
-    //     $(this).attr({
-    //         "src": animateURL,
-    //         "data-state": "animate" 
-    //     })} else {
-    //     $(this).attr({
-    //         "src": stillURL,
-    //         "data-state": "still"
-    //     })
-    // }
+    if (state == "still") {
+        $(this).attr({
+            "src": animateURL,
+            "data-state": "animate" 
+        })} else {
+        $(this).attr({
+            "src": stillURL,
+            "data-state": "still"
+        })
+    }
 });
 
 $("#buttons-display").on("click", ".tvshow", displayTVshowInfo);

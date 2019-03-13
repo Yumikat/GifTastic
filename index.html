@@ -8,6 +8,8 @@
     <title>GifTastic</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 
 </head>
@@ -15,25 +17,31 @@
 <body>
 
     <div class="container">
-        <h1>TV Shows</h1>
+        <div class="row">
+            <div class="col-4" id="left">
+                <h1>TV Shows</h1>
 
-        <div id="buttons-display"></div>
-<br><br>
-        <form id="tvshow-form">
-            <label for="tvshow-input">Find a TV Show</label><br>
-            <br><input type="text" id="tvshow-input"><br>
+                <div id="buttons-display"></div>
+                <br><br>
+                <form id="tvshow-form">
+                    <label for="tvshow-input">Find a TV Show</label><br>
+                    <br><input type="text" id="tvshow-input"><br>
 
-            <input id="add-tvshow" type="submit" value="Find a TV Show"><br>
-        </form>
-        <hr>
+                    <input id="add-tvshow" type="submit" value="Find a TV Show"><br>
+                </form>
+            </div>
 
-        <br>
+            <hr>
 
-        <div id="tvshow-display"></div>
+            <br>
+            <div class="col-8">
+                <div id="tvshow-display"></div>
+            </div>
 
+        </div>
     </div>
 
-    <!-- <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+        <!-- <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -45,7 +53,7 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="app.js"></script>
 
 
 </body>

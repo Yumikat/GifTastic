@@ -1,0 +1,42 @@
+.tvshow {
+    margin: 15px;
+    padding 5px;
+    background-color: #ccffee;
+    color: teal;
+}
+
+.tvshow:hover {
+    opacity: 0.5;
+    background-color: midnightblue;
+    color: mintcream;
+}
+
+#add-tvshow {
+    margin: 15px;
+    background-color: midnightblue;
+    color: mintcream;
+}
+
+#add-tvshow:hover {
+    opacity: 0.8;
+    background-color: #ccffee;
+    color: teal;
+}
+
+body {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    background: linear-gradient(to bottom right, mintcream, teal), no-repeat;
+    color: aquamarine;
+    text-shadow: 5px 5px 10px black;
+    font-weight: bolder;
+}
+
+#left {
+    border-right: 1px solid white;
+}
+
+button {
+    box-shadow: 5px 5px 10px gray;
+}
